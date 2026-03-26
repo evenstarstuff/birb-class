@@ -11,7 +11,9 @@ TEMPLATE_DIR = ROOT_DIR / "templates"
 PANTRY_DIR = ROOT_DIR / "pantry"
 DATA_DIR = ROOT_DIR / "data"
 
-ryland = Ryland(output_dir=OUTPUT_DIR, template_dir=TEMPLATE_DIR)
+import os
+url_root = os.environ.get("URL_ROOT", "/")
+ryland = Ryland(output_dir=OUTPUT_DIR, template_dir=TEMPLATE_DIR, url_root=url_root)
 
 ryland.clear_output()
 
