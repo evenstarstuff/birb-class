@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Birb Class{% endblock %}</title>
+        <link rel="stylesheet" href="{{ calc_url('style.css') }}">
+      </head>
+      <body>
+        <header>
+          <h1><a href="{{ calc_url('') }}">Birb Class</a></h1>
+          <p>Notes from the front row</p>
+        </header>
+        <main>
+          {% block content %}{% endblock %}
+        </main>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}{{ bird.name }} | Birb Class{% endblock %}
+
+{% block content %}
+    <article>
+      <h2>{{ bird.name }}</h2>
+      <p class="section-label">{{ bird.section }}</p>
+
+      <section class="identification">
+        <h3>Identification</h3>
+        <p>{{ bird.identification }}</p>
+      </section>
+
+      <section class="song">
+        <h3>Song</h3>
+        <p>{{ bird.song }}</p>
+      </section>
+
+      {% if bird.facts %}
+      <section class="facts">
+        <h3>Additional Birb Facts</h3>
+        <p>{{ bird.facts }}</p>
+      </section>
+      {% endif %}
+
+    </article>
+{% endblock %}

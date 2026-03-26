@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section>
+    <h2>Species</h2>
+    <ul class="species-list">
+        {% for bird in birds %}
+        <li><a href="{{ calc_url('birds/' + bird.name.lower().replace(' ', '-') + '/') }}">{{ bird.name }}</a></li>
+        {% endfor %}
+    </ul>
+</section>
+{% endblock %}
