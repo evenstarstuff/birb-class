@@ -5,6 +5,9 @@ from pathlib import Path
 import yaml
 from ryland import Ryland
 
+import shutil
+from os import makedirs
+
 ROOT_DIR = Path(__file__).parent.parent
 OUTPUT_DIR = ROOT_DIR / "site"
 TEMPLATE_DIR = ROOT_DIR / "templates"
@@ -21,6 +24,17 @@ ryland.clear_output()
 
 ryland.copy_to_output(PANTRY_DIR / "style.css")
 ryland.add_hash("style.css")
+
+## photos and audio
+
+makedirs(OUTPUT_DIR / "photos", exist_ok=True)
+makedirs(OUTPUT_DIR / "audio", exist_ok=True)
+
+for photo in (ROOT_DIR / "photos").glob("*.*"):
+    shutil.copy(photo, OUTPUT_DIR / "photos" / photo.name)
+
+for sound in (ROOT_DIR / "audio").glob("*.*"):
+    shutil.copy(sound, OUTPUT_DIR / "audio" / sound.name)
 
 ## birds
 

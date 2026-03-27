@@ -1,7 +1,16 @@
 name: Arctic Warbler
 section: Warblers
 identification: "Dull olive-brown warbler. Prominent yellowish-white eyestripe. Faint wingbars and pale whitish underparts. "
-song: "Electric chattery trill is most notable. Sounds similar to a Wilson’s warbler and Orange-crowned warbler. Also makes a metallic two-noted call and a short harsh buzz."
+song: "Electric chattery trill is most notable. Sounds similar to a Wilson’s Warbler and Orange-crowned Warbler. Also makes a metallic two-noted call and a short harsh buzz."
 facts: null
-photos: []
-audio: null
+photos:
+  - filename: arctic-warbler-1.png
+  - filename: arctic-warbler-2.png
+  - filename: arctic-warbler-3.png
+  - filename: arctic-warbler-4.png
+audio:
+    - filename: arctic-warbler-song.mp3
+      label: Song
+      caption: "Canonically includes a Discord notification noise thanks to Jordan"
+    - filename: arctic-warbler-call.mp3
+      label: Call

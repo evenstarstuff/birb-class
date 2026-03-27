@@ -10,11 +10,31 @@
       <section class="identification">
         <h3>Identification</h3>
         <p>{{ bird.identification }}</p>
+        {% if bird.photos %}
+        <div class="photo-grid">
+          {% for photo in bird.photos %}
+          <a href="{{ calc_url('photos/' + photo.filename) }}" target="_blank">
+            <img src="{{ calc_url('photos/' + photo.filename) }}" alt="{{ bird.name }}">
+          </a>
+          {% endfor %}
+        </div>
+        {% endif %}
       </section>
 
       <section class="song">
         <h3>Song</h3>
         <p>{{ bird.song }}</p>
+        {% if bird.audio %}
+        {% for sound in bird.audio %}
+        <div class="sound">
+          <p class="sound-label">{{ sound.label }}</p>
+          <audio controls src="{{ calc_url('audio/' + sound.filename) }}"></audio>
+          {% if sound.caption %}
+          <p class="sound-caption">{{ sound.caption }}</p>
+          {% endif %}
+        </div>
+        {% endfor %}
+        {% endif %}
       </section>
 
       {% if bird.facts %}
@@ -25,4 +45,4 @@
       {% endif %}
 
     </article>
-{% endblock %}
+    {% endblock %}
