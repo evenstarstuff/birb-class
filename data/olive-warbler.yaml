@@ -8,3 +8,9 @@ photos:
   - filename: olive-warbler-2.png
   - filename: olive-warbler-3.png
   - filename: olive-warbler-4.png
+audio:
+    - filename: olive-warbler-song.mp3
+      label: Song
+    - filename: olive-warbler-call.mp3
+      label: Call
+      caption: "Guaranteed to make Kepler search for birb in home"
